@@ -1,7 +1,17 @@
-<!DOCTYPE html>
 <?php
-$connect=mysqli_connect("127.0.0.1","root","","testigem");
+	require("./bdd.php");
+	if(isset($_POST["bacterie"])){
+		if (!isset($_COOKIE["histo"])) {
+			$selected=$_POST["bacterie"];
+			$selected_lin=serialize($selected);
+			setcookie("histo",$selected_lin,time()+1);
+			header('location: search.php');
+		}
+	}
+
+
 ?>
+<!DOCTYPE html>
 <head>
 	<link rel="stylesheet" href="stylesheet.css">
 
@@ -72,14 +82,7 @@ $connect=mysqli_connect("127.0.0.1","root","","testigem");
 	<table id="globale" class="columns">
 		<tr>
 			<?php 
-			if(isset($_POST["bacterie"])){
-				if (!isset($_COOKIE["histo"])) {
-					$selected=$_POST["bacterie"];
-					$selected_lin=serialize($selected);
-					setcookie("histo",$selected_lin,time()+1);
-					header('location: search.php');
-				}
-			}
+
 			if (isset($_COOKIE["histo"])) {
 				$selected=unserialize($_COOKIE["histo"]);
 				foreach($selected as$val){
@@ -131,7 +134,7 @@ $connect=mysqli_connect("127.0.0.1","root","","testigem");
 						<div class="row">
 							<div class="column">
 								<figure>
-									<img src="plasmidImage\promoteur.png" alt="promoteur" style="width:100%">
+									<img src="plasmidimage\promoteur.png" alt="promoteur" style="width:100%">
 									<figcaption><input type="submit" id="getprom" name="sendprom" value="choose promoter"></figcaption>
 								</figure>
 							</div>

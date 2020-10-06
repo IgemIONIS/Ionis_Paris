@@ -1,6 +1,5 @@
 <?php
-$connect=mysqli_connect("127.0.0.1","root","","testigem");
-$bdd = new PDO('mysql:host=localhost;dbname=testigem;charset=utf8', 'root', '');
+	require("./bdd.php");
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,5 +1,7 @@
-<?php $connect=mysqli_connect("127.0.0.1","root","","testigem");if($connect){
-	
+<?php
+	require("./bdd.php");
+	if($connect){
+
 	?>
 
 	<!DOCTYPE html>

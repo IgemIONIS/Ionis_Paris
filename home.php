@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$connect=mysqli_connect("127.0.0.1","root","","testigem");
+	require("./bdd.php");
 ?>
 <head>
 	<link rel="stylesheet" href="stylesheet.css">
