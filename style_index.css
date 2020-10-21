@@ -71,19 +71,7 @@ caption{
 .foot{
 	text-align: center;
 }
-.map{
-	overflow:hidden;
-	padding-bottom:25%;
-	position:relative;
-	height:0;
-}
-.map iframe {
-left:0;
-top:0;
-height:100%;
-width:100%;
-position:absolute;
-}
+
 .particuliers:hover{
 	color: red;
 	transition-duration: 0.1s;

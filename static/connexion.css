@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,600,700&display=swap');
+
+body{
+	margin: 0;
+	text-align: center;
+    position: relative;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+img{
+	width: 250px;
+	/*margin-bottom: 50px;
+	margin-top: 20px;*/
+}
+
+h1{
+	font-weight: 600;
+	color: hsl(0,0%,0%);
+    font-weight: 300;
+    font-size: 35px;
+}
+
+form{
+	width: 50%;
+	margin: auto;
+}
+
+input, textarea {
+  width: 50%;
+  padding:10px;
+  margin: 5px;
+}
+
+
+fieldset{
+	border: none;
+}
+
+
+.connexion{
+	border: none;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    width: 120px;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    background-image: linear-gradient(to right, #FF9A8B 0%, #FF6A88  31%, #FF99AC  100%);
+}
+
+.send {
+    border: none;
+    color: #fff;
+    margin-top: 50px;
+    border-radius: 50px;
+    width: 120px;
+    padding: 10px 35px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    background-image: linear-gradient(to right, #FF9A8B 0%, #FF6A88  31%, #FF99AC  100%);
+}
+
+.tohome{
+	margin: 20px;
+}
+
+.home {
+    border: solid 1px transparent;
+    margin-top: 50px;
+    border-radius: 50px;
+    width: 60px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 15px;
+    margin: 10px;
+    background-origin: border-box;
+    color: hsl(0,0%,50%);
+    background-clip: content-box,border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)), linear-gradient(101deg, #FF9A8B, #FF6A88);
+    
+}
+
+.submissionbutton {
+    border: none;
+    color: #fff;
+    display: flex;
+    margin-top: 50px;
+    border-radius: 50px;
+    width: 120px;
+    padding: 10px 22px;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 15px;
+    margin: 10px;
+    background-image: linear-gradient(to right, #FF9A8B 0%, #FF6A88  31%, #FF99AC  100%);
+}
+
+.left{
+	float:left;
+	padding-right: 225px;
+}
+
+.right{
+	align-items: center;
+	display: flex;
+	padding-left: 225px;
+}

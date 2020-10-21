@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,600,700&display=swap');
+
+.titre{
+	font-weight: 400;
+	font-size: 45px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body{
+	margin: 0;
+	text-align: center;
+    position: relative;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+img{
+	width: 250px;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+
+h1{
+	font-weight: 600;
+	color: hsl(0,0%,0%);
+    font-weight: 300;
+    font-size: 35px;
+}
+
+input, textarea {
+  width: 50%;
+  padding:10px;
+  margin: 5px;
+}
+
+
+.connexion{
+	border: none;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    width: 120px;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    background-image: linear-gradient(to right, #FF9A8B 0%, #FF6A88  31%, #FF99AC  100%);
+}
+
+.tohome{
+	margin: 20px;
+}
+
+
+.home {
+    border: solid 1px transparent;
+    margin-top: 50px;
+    border-radius: 50px;
+    width: 60px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 15px;
+    margin: 10px;
+    background-origin: border-box;
+    color: hsl(0,0%,50%);
+    background-clip: content-box,border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0)), linear-gradient(101deg, #FF9A8B, #FF6A88);   
+}

@@ -1,15 +1,22 @@
 <?php
-	require("./bdd.php");
+require("./bdd.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="style_index.css">
-	<title>page de validation admin</title>
+	<link rel="stylesheet" type="text/css" href="static/validation.css">
+	<title>Admin validation</title>
 </head>
 <header>
-	<h1 class="titre"><img class="img" src="igemIonis.png">page de validation admin</h1>
-	<a href="home.php" class="acceuil">acceuil</a>
+	<a href="https://2020.igem.org/Team:Ionis_Paris">
+		<img class="img" src="image/igemIonis.png">
+	</a>
+	<br>
+	<h1 class="titre">Admin validation page</h1>
+	<br>
+	<br>
+	<div class="tohome"><a href="home.php" class="connexion">Home</a></div>
 </header>
 <body>
 	<form action="validation.php" method="POST" id="validation"></form>

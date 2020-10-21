@@ -1,45 +1,53 @@
-<?php
-	require("./bdd.php");
-	if($connect){
-
+<?php 
+require("./bdd.php");
+if($connect){
+	
 	?>
 
 	<!DOCTYPE html>
+	<link rel="stylesheet" type="text/css" href="static/connexion.css">
+
 	<html>
 	<header>
-		<h1 class="titre"><img class="img" src="image/igemIonis.png">Connexion</h1>
-
+		<a href="https://2020.igem.org/Team:Ionis_Paris">
+			<img class="img" src="image/igemIonis.png">
+		</a>
+			<h1 class="titre">Connexion</h1>
 	</header>
-	<head>
+	
 		<title>page de connexion</title>
-		<link rel="stylesheet" href="style_index.css">
-		<a href="home.php" class="connexion">home</a>
 
+		<div class="tohome"><a href="home.php" class="connexion">Home</a></div>
+		<br>
+		<br>
 
-		<head>
+	
 			<form action="connexion.php" method="POST" name="identification">
 				<fieldset>
-					<label for ="ID">adresse email ou identifiant:</label>
+					<label for ="ID">Adresse email ou identifiant:</label>
+					<br>
 					<input type="text" name="ID" <?php if (isset($_COOKIE["MDP_incorrecte"])) {
 						echo "value=".$_COOKIE["MDP_incorrecte"];
 					}?>>
 					<br>
+					<br>
 					<label for ="MDP">Mot de passe:</label>
+					<br>
 					<input type="text" name="MDP">
 
 				</fieldset>
-				<input type="submit" name="send" value="envoyer">
+				<input type="submit" name="send" class="send" value="Envoyer">
 			</form>	
 
 
-			<html>
-			<?php
+			
+		<?php
 			
 
 			if (isset($_POST["ID"]) && isset($_POST["MDP"])){
 				$ID=$_POST["ID"];
 				$MDP=$_POST["MDP"];
-				$req='SELECT email,MDP FROM admin';
+				$req='SELECT ID,mdp FROM logadmin';
 				$resultat=mysqli_query($connect,$req);
 				if($resultat==false)echo"Echec de l'exécution de la requête";
 				else{
@@ -64,9 +72,3 @@
 		}
 
 		?>
-		<footer class="apres">
-			<p class="foot">
-				work in progress
-			</p>
-
-		</footer>

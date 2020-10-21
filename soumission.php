@@ -1,17 +1,43 @@
+<!DOCTYPE html>
 <?php
-	require("./bdd.php");
+require("./bdd.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="style_index.css">
+	<link rel="stylesheet" href="static/submission.css">
 	<title>soumission</title>
 </head>
+
 <header>
-	<h1 class="titre"><img class="img" src="igemIonis.png">soubmission</h1>
-	<a href="home.php" class="connexion">home</a>
-	<a href="search.php" class="search">search</a>
+	
+	<div class="navigation">
+		<div class="inner">
+			<div class="container">
+				<div class="left">
+					<a href="https://2020.igem.org/Team:Ionis_Paris">	
+						<img class="img" src="image/igemIonis.png" class="igem-logo">
+					</a>
+				</div>
+				<div class="right">
+					<a href="search.php" class="search">Search</a>
+					<a href="home.php" class="home">Home</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h1 class="titre">
+		Submission
+	</h1>
+	
+
 </header>
+
+
+
+
 <body>
 	<form action="soumission.php" method="POST" name="add">
 		<fieldset>
@@ -43,11 +69,17 @@
 
 			<input type="email" id="email" name="email" placeholder="email" required="required">
 
-			<input type="submit" name="ajouter" value="ajouter">
+			
 
 		</fieldset>
 
+		<div class="Add">
+			<input type="submit" class="ajouter" name="ajouter" value="Add">
+		</div>
+
 	</form>
+
+	
 
 	<?php
 	if (isset($_POST["ajouter"])) {

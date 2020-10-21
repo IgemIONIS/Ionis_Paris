@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<?php
-	require("./bdd.php");
+<?php require("./bdd.php");
 ?>
 <html>
 <body>
