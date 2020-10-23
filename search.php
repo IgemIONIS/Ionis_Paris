@@ -1,7 +1,16 @@
-´<!DOCTYPE html>
 <?php
 	require("./bdd.php");
+
+	if(isset($_POST["bacterie"])){
+		if (!isset($_COOKIE["histo"])) {
+			$selected=$_POST["bacterie"];
+			$selected_lin=serialize($selected);
+			setcookie("histo",$selected_lin,time()+1);
+			header('location: search.php');
+		}
+	}
 ?>
+´<!DOCTYPE html>
 
 <link rel="stylesheet" type="text/css" href="static/static.css">
 <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>	
@@ -103,17 +112,7 @@
 
 <table id="globale" class="columns">
 	<tr>
-		<?php 
 
-		if(isset($_POST["bacterie"])){
-			if (!isset($_COOKIE["histo"])) {
-				$selected=$_POST["bacterie"];
-				$selected_lin=serialize($selected);
-				setcookie("histo",$selected_lin,time()+1);
-				header('location: search.php');
-			}
-		}
-		?>
 		<?php
 		if (isset($_COOKIE["histo"])) {
 			$selected=unserialize($_COOKIE["histo"]);

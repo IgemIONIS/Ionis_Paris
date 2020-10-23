@@ -1,7 +1,36 @@
-<?php 
+<?php
 require("./bdd.php");
+
+
+
+if (isset($_POST["ID"]) && isset($_POST["MDP"])){
+	$ID=$_POST["ID"];
+	$MDP=$_POST["MDP"];
+	$req='SELECT ID,mdp FROM logadmin';
+	$resultat=mysqli_query($connect,$req);
+	if($resultat==false)echo"Echec de l'exécution de la requête";
+	else{
+//fetchsurchaquelignedelarequête
+		while($ligne=mysqli_fetch_row($resultat)){
+			if ($ID===$ligne[0]) {
+				if ($MDP===$ligne[1]) {
+					header('location: validation.php');
+				}
+			}
+
+		}
+	}
+}
+
+
+
+else{
+	echo "connexion à la base de donnée impossible";
+}
+
+
 if($connect){
-	
+
 	?>
 
 	<!DOCTYPE html>
@@ -40,35 +69,5 @@ if($connect){
 			</form>	
 
 
-			
-		<?php
-			
-
-			if (isset($_POST["ID"]) && isset($_POST["MDP"])){
-				$ID=$_POST["ID"];
-				$MDP=$_POST["MDP"];
-				$req='SELECT ID,mdp FROM logadmin';
-				$resultat=mysqli_query($connect,$req);
-				if($resultat==false)echo"Echec de l'exécution de la requête";
-				else{
-		//fetchsurchaquelignedelarequête
-					while($ligne=mysqli_fetch_row($resultat)){
-						if ($ID===$ligne[0]) {
-							if ($MDP===$ligne[1]) {
-								echo "connexion admin autoriser <br>";
-								header('location: validation.php');
-							}
-						}
-
-					}
-				}
-			}
-
-
-
-		}
-		else{
-			echo "connexion à la base de donnée impossible";
-		}
-
-		?>
+			<?php
+}
