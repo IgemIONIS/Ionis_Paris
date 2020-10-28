@@ -14,8 +14,10 @@ with those files you can:
 	execute wampserver (it will simulate a php server on your computer)
 	download all the fil from git hub (https://github.com/IgemIONIS/Ionis_Paris)
 	open your file browser and go to C:\wamp64\www
-	create a new folder called IGEM
-	copy and paste everything from our git except the "testigem" folder
+	copy and paste the "IGEM" folder here
+	open this folder and open "bdd.php" in any text editor (sublimeText, notpad++, standard notpad for windows)
+	replace the line "$connect=mysqli_connect("database","root","IgiemCbi1", "testigem");" with "$connect=mysqli_connect("localhost","root","", "testigem");"
+	save and close the text editor
 	open your file browser and go to C:\wamp64\bin\mysql\mysql5.7.31\data
 	copy and paste the "testigem" folder
 	you can now access our software locally in a web browser at this link: http://localhost/igem/home.php
